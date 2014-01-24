@@ -41,6 +41,11 @@ gem_group :production do
   gem 'newrelic_rpm'
 end
 
+# Ruby Version Insert
+insert_into_file "Gemfile",
+  "ruby '2.1.0'\n",
+  after: "source 'https://rubygems.org'\n"
+
 # CommentOut
 comment_lines 'Gemfile', "gem 'sqlite3'"
 
