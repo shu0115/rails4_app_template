@@ -17,7 +17,7 @@ gem 'coderay'
 
 # Development
 gem_group :development do
-  gem "heroku_san"
+  # gem "heroku_san"
   gem 'pry-rails'
   gem 'better_errors'
   gem 'binding_of_caller'
@@ -54,5 +54,5 @@ run "bundle install --without production"
 run "bundle update"
 
 # Generate Command
-run "rails generate heroku_san"
+# run "rails generate heroku_san"
 run "rails generate rspec:install"
