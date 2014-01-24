@@ -39,6 +39,7 @@ gem_group :production do
   gem 'rails_12factor'
   gem 'pg'
   gem 'newrelic_rpm'
+  gem 'bugsnag'
 end
 
 # Ruby Version Insert
