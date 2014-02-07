@@ -8,8 +8,9 @@ gem 'rails_config'
 gem 'tapp'
 gem 'awesome_print'
 gem 'i18n_generators'
-gem "exception_notification"
+gem 'exception_notification'
 gem 'haml-rails'
+gem 'ruby-duration'
 
 # Markdown & Syntax Highlight
 gem 'redcarpet'
