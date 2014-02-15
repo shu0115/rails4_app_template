@@ -11,6 +11,7 @@ gem 'i18n_generators'
 gem 'exception_notification'
 gem 'haml-rails'
 gem 'ruby-duration'
+gem 'everywhere'
 
 # Markdown & Syntax Highlight
 gem 'redcarpet'
