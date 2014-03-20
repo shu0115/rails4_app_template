@@ -48,7 +48,7 @@ end
 
 # Ruby Version Insert
 insert_into_file "Gemfile",
-  "ruby '2.1.0'\n",
+  "ruby '2.1.1'\n",
   after: "source 'https://rubygems.org'\n"
 
 # CommentOut
