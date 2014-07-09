@@ -1,5 +1,7 @@
-# インストールGem
+## インストールGem
 gem 'minimum-omniauth-scaffold'
+gem 'ar_to_hash'
+
 gem 'action_args'
 gem 'html5_validators'
 gem 'puma'
@@ -13,11 +15,11 @@ gem 'haml-rails'
 gem 'ruby-duration'
 gem 'everywhere'
 
-# Markdown & Syntax Highlight
+## Markdown & Syntax Highlight
 gem 'redcarpet'
 gem 'coderay'
 
-# Development
+## Development
 gem_group :development do
   # gem "heroku_san"
   gem 'pry-rails'
@@ -30,13 +32,13 @@ gem_group :development do
   gem 'bullet'
 end
 
-# Development AND Test
+## Development and Test
 gem_group :development, :test do
   gem "sqlite3"
   gem 'rspec-rails'
 end
 
-# Production
+## Production
 gem_group :production do
   gem 'rails_12factor'
   gem 'pg'
@@ -46,18 +48,18 @@ gem_group :production do
   gem 'appsignal'
 end
 
-# Ruby Version Insert
+## Ruby Version Insert
 insert_into_file "Gemfile",
   "ruby '2.1.1'\n",
   after: "source 'https://rubygems.org'\n"
 
-# CommentOut
+## CommentOut
 comment_lines 'Gemfile', "gem 'sqlite3'"
 
-# Gem Install
+## Gem Install
 run "bundle install --without production"
 run "bundle update"
 
-# Generate Command
+## Generate Command
 # run "rails generate heroku_san"
 run "rails generate rspec:install"
