@@ -53,6 +53,11 @@ insert_into_file "Gemfile",
   "ruby '2.1.1'\n",
   after: "source 'https://rubygems.org'\n"
 
+## Add Strong Parameters config
+insert_into_file "config/environments/development.rb",
+  "\n  # Strong Parametersエラー例外発生\n  config.action_controller.action_on_unpermitted_parameters = :raise\n",
+  after: "# config.action_view.raise_on_missing_translations = true\n"
+
 ## CommentOut
 comment_lines 'Gemfile', "gem 'sqlite3'"
 
