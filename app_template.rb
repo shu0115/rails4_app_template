@@ -1,6 +1,5 @@
 ## インストールGem
 gem 'minimum-omniauth-scaffold'
-gem 'ar_to_hash'
 
 gem 'action_args'
 gem 'html5_validators'
