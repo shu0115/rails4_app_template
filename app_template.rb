@@ -42,14 +42,11 @@ gem_group :production do
   gem 'rails_12factor'
   gem 'pg'
   gem 'newrelic_rpm'
-  gem 'bounscale'
-  gem 'bugsnag'
-  gem 'appsignal'
 end
 
 ## Ruby Version Insert
 insert_into_file "Gemfile",
-  "ruby '2.1.1'\n",
+  "ruby '2.1.5'\n",
   after: "source 'https://rubygems.org'\n"
 
 ## Add Strong Parameters config
