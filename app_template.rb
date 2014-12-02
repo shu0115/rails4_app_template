@@ -54,6 +54,22 @@ insert_into_file "config/environments/development.rb",
   "\n  # Strong Parametersエラー例外発生\n  config.action_controller.action_on_unpermitted_parameters = :raise\n",
   after: "# config.action_view.raise_on_missing_translations = true\n"
 
+## application.rb setting
+content = "    config.time_zone = 'Tokyo'\n"
+insert_into_file "config/application.rb", content.force_encoding('ASCII-8BIT'), after: "# config.time_zone = 'Central Time (US & Canada)'\n"
+insert_into_file "config/application.rb", "    config.i18n.default_locale     = :ja\n    I18n.enforce_available_locales = false\n", after: "# config.i18n.default_locale = :de\n"
+content = "    # For Tapp\n"
+content += "    Tapp.config.default_printer = :awesome_print\n"
+content += "\n"
+insert_into_file "config/application.rb", content.force_encoding('ASCII-8BIT'), after: "class Application < Rails::Application\n"
+
+## production.rb setting
+insert_into_file "config/environments/production.rb", "  config.force_ssl = true\n", after: "# config.force_ssl = true\n"  # 強制SSL設定
+
+## development.rb setting
+gsub_file "config/environments/development.rb", /(config.assets.debug = true)+/, "# config.assets.debug = true"                  # コメントアウト追加
+insert_into_file "config/environments/development.rb", "  config.assets.debug = false\n", after: "config.assets.debug = true\n"  # false設定追加
+
 ## CommentOut
 comment_lines 'Gemfile', "gem 'sqlite3'"
 
