@@ -1,6 +1,3 @@
-# Reference: [rails-app-template/rails-app-template.rb at master · labocho/rails-app-template](https://github.com/labocho/rails-app-template/blob/master/rails-app-template.rb)
-
-template_path = "#{File.dirname(__FILE__)}/templates"
 
 # ---------- Install Gem ---------- #
 ## Utilities
@@ -95,7 +92,6 @@ comment_lines 'Gemfile', "gem 'sqlite3'"
 
 ## Gem Install
 run "bundle install --without production"
-run "bundle update"
 
 # ---------- RSpec ---------- #
 ## Generate Command
@@ -103,3 +99,5 @@ run "rails generate rspec:install"
 
 # ---------- Git ---------- #
 git :init
+git add: '-A'
+git commit: '-m "Initial commit"'
