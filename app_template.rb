@@ -51,7 +51,11 @@ end
 # ---------- Assets ---------- #
 ## Replace application.js
 remove_file "application.js"
-create_file "app/assets/javascripts/application.js.rb", File.read("#{template_path}/application.js.rb")
+content =  "//= require opal\n"
+content += "//= require opal_ujs\n"
+content += "//= require turbolinks\n"
+content += "//= require_tree .\n"
+create_file "app/assets/javascripts/application.js.rb", content.force_encoding('ASCII-8BIT'))
 
 # ---------- Config ---------- #
 ## application.rb setting
