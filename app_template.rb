@@ -47,7 +47,7 @@ end
 
 # ---------- Assets ---------- #
 ## Replace application.js
-remove_file "application.js"
+remove_file "app/assets/javascripts/application.js"
 content =  "//= require opal\n"
 content += "//= require opal_ujs\n"
 content += "//= require turbolinks\n"
