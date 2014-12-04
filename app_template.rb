@@ -64,6 +64,10 @@ create_file 'Procfile', content.force_encoding('ASCII-8BIT')
 content = Net::HTTP.get URI.parse('https://raw.githubusercontent.com/shu0115/rails4_app_template/master/templates/config/puma.rb')
 create_file 'config/puma.rb', content.force_encoding('ASCII-8BIT')
 
+## database_connection.rb
+content = Net::HTTP.get URI.parse('https://raw.githubusercontent.com/shu0115/rails4_app_template/master/templates/config/initializers/database_connection.rb')
+create_file 'config/initializers/database_connection.rb', content.force_encoding('ASCII-8BIT')
+
 ## application.rb setting
 content = "    config.time_zone = 'Tokyo'\n"
 insert_into_file "config/application.rb", content.force_encoding('ASCII-8BIT'), after: "# config.time_zone = 'Central Time (US & Canada)'\n"
