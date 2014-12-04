@@ -56,6 +56,10 @@ content += "//= require_tree .\n"
 create_file "app/assets/javascripts/application.js.rb", content.force_encoding('ASCII-8BIT')
 
 # ---------- Config ---------- #
+## Procfile
+content = "web: bundle exec puma -C config/puma.rb\n"
+create_file "Procfile", content.force_encoding('ASCII-8BIT')
+
 ## application.rb setting
 content = "    config.time_zone = 'Tokyo'\n"
 insert_into_file "config/application.rb", content.force_encoding('ASCII-8BIT'), after: "# config.time_zone = 'Central Time (US & Canada)'\n"
