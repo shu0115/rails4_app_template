@@ -15,4 +15,3 @@ on_worker_boot do
     ActiveRecord::Base.establish_connection(config)
   end
 end
-
