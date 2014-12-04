@@ -58,7 +58,11 @@ create_file "app/assets/javascripts/application.js.rb", content.force_encoding('
 # ---------- Config ---------- #
 ## Procfile
 content = "web: bundle exec puma -C config/puma.rb\n"
-create_file "Procfile", content.force_encoding('ASCII-8BIT')
+create_file 'Procfile', content.force_encoding('ASCII-8BIT')
+
+## puma.rb
+content = Net::HTTP.get URI.parse('https://raw.githubusercontent.com/shu0115/rails4_app_template/master/templates/config/puma.rb')
+create_file 'config/puma.rb', content.force_encoding('ASCII-8BIT')
 
 ## application.rb setting
 content = "    config.time_zone = 'Tokyo'\n"
