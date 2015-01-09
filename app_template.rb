@@ -1,5 +1,8 @@
 
 # ---------- Install Gem ---------- #
+## Comment Out
+comment_lines 'Gemfile', "gem 'sqlite3'"
+
 ## Utilities
 gem 'minimum-omniauth-scaffold'
 gem 'action_args'
@@ -34,7 +37,7 @@ end
 
 ## Development and Test
 gem_group :development, :test do
-  gem "sqlite3"
+  gem 'sqlite3'
   gem 'rspec-rails'
 end
 
@@ -99,9 +102,6 @@ insert_into_file "config/environments/development.rb",
 insert_into_file "Gemfile",
   "ruby '2.1.5'\n",
   after: "source 'https://rubygems.org'\n"
-
-## Comment Out
-comment_lines 'Gemfile', "gem 'sqlite3'"
 
 ## Gem Install
 run "bundle install --without production"
