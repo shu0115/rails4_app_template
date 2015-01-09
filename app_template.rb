@@ -100,7 +100,7 @@ insert_into_file "config/environments/development.rb",
 # ---------- Gemfile ---------- #
 ## Ruby Version Insert
 insert_into_file "Gemfile",
-  "ruby '2.1.5'\n",
+  "ruby '2.2.0'\n",
   after: "source 'https://rubygems.org'\n"
 
 ## Gem Install
