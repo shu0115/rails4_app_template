@@ -53,7 +53,6 @@ end
 remove_file "app/assets/javascripts/application.js"
 content =  "//= require opal\n"
 content += "//= require opal_ujs\n"
-content += "//= require turbolinks\n"
 content += "//= require_tree .\n"
 create_file "app/assets/javascripts/application.js.rb", content.force_encoding('ASCII-8BIT')
 
